@@ -3,7 +3,7 @@
 // You shouldn't need to make any modifications here.
 
 const chalk = require("chalk");
-const Sequelize = require("sequelize");
+const sequelize = require("sequelize");
 const pkg = require("../../package.json");
 
 // We'll need to reset the database many times while we're testing, and
@@ -14,7 +14,7 @@ const pkg = require("../../package.json");
 const dbName = process.env.NODE_ENV === "test" ? `${pkg.name}-test` : pkg.name;
 console.log(chalk.yellow(`Opening database connection to ${dbName}`));
 
-const db = new Sequelize(
+const db = new sequelize(
   process.env.DATABASE || `postgres://localhost:5432/${dbName}`,
   {
     logging: false,
