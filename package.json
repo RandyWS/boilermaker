@@ -4,7 +4,7 @@
   "description": "",
   "main": "boilermaker.js",
   "scripts": {
-    "start": "npm run build-watch & npm run start-dev-server",
+    "start": "node main.js",
     "start-dev": "npm run build-watch & npm run start-dev-server",
     "start-dev-server": "nodemon main.js -e html,js,css --ignore public",
     "build-watch": "webpack -w",
